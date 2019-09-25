@@ -13,14 +13,15 @@
   </style>
 </head>
 <body>
+  <div id="app">
   <!-- TODO: App Title을 뷰 데이터 속성으로 관리할 수 있게 데이터 바인딩을 적용해보세요. -->
   <header>
-    <div>
-      App Title
+    <div id>
+      {{title}}
     </div>
     <div>
       <!-- TODO: 아래 로그인 버튼을 클릭했을 때 버튼이 사라지게 뷰 디렉티브를 적용해보세요. -->
-      <button>Login</button>
+      <button @click="hiddenBtn">Login</button>
     </div>
   </header>
   <section>
@@ -33,10 +34,23 @@
       <li>Pants</li>
     </ul>
   </section>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
     // TODO: 아래에 코드 제작
+
+    new Vue({
+      el: '#app',
+      data: {
+        title: 'App title'
+      },
+      methods: {
+        hiddenBtn:function(){
+          
+        }
+      }
+    })
   </script>
 </body>
 </html>
